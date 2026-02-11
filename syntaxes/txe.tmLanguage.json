@@ -2,13 +2,31 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "txe",
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
+    {
+        "name": "comment.line.double-slash.txe",
+        "match": "//.*$"
+    },
+    {
+        "name": "keyword.control.txe",
+        "match": "!(if|jump|iskey):?"
+    },
+    {
+        "name": "keyword.control.stop.txe",
+        "match": "!(ifstop|polygonstop|textend|end)"
+    },
+    {
+        "name": "storage.type.block.txe",
+        "match": "!(polygon|text):"
+    },
+    {
+        "name": "variable.function.txe",
+        "match": "!(makevar|add|sub|mult|div|wait|replace|log):"
+    },
+    {
+        "name": "variable.parameter.txe",
+        "match": "-(point|color|font|size|weight|offset|alignment|pos|content):?"
+    }
+],
 	"repository": {
 		"keywords": {
 			"patterns": [{
