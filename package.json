@@ -1,0 +1,34 @@
+{
+  "name": "txe-support",
+  "displayName": "txe support",
+  "description": "baisic txe support",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.109.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "txe",
+        "aliases": [
+          "txe",
+          "txe"
+        ],
+        "extensions": [
+          ".txe"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "txe",
+        "scopeName": "source.txe",
+        "path": "./syntaxes/txe.tmLanguage.json"
+      }
+    ]
+  }
+}
